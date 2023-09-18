@@ -99,7 +99,8 @@ $(function(){
 		</tr>
 	</table>
 	<h3>
-		<a href="/admin/loginform">관리자모드</a>
+		<a href="/admin/loginform">로그인</a>
+		<a href="/admin/regist">회원가입</a>
 	</h3>
 </body>
 </html>

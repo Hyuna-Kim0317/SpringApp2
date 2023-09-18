@@ -74,37 +74,38 @@ button:hover {
 </style>
 <%@ include file="./inc/head_link.jsp" %>
 <script type="text/javascript">
-function loginCheck(){
-	$("form").attr({
-		action:"/admin/login",
-		method:"post"
-	});
-	$("form").submit();
-}
 $(function(){
-	$("#bt_login").click(function(){
-		loginCheck();
-	});	
-	$("#bt_cancel").click(function(){
+	$("button").click(function(){
 		location.href="/gallery/list";
 	});	
 });
 </script>
 <body>
 
-<form  style="border:1px solid #ccc">
+<form action="/action_page.php" style="border:1px solid #ccc">
   <div class="container">
-    <h1>Login</h1>
-    <p>Enter your information</p>
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
     <hr>
 
-
+    <b>ID</b>
     <input type="text" placeholder="Enter ID" name="id" required>
-    <input type="password" placeholder="Enter Password" name="pass" required>
+    
+    <b>Email</b>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <b>Password</b>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <b>Repeat Password</b>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn" id="bt_cancel">Cancel</button>
-      <button type="button" class="signupbtn" value="Login" id="bt_login">Login</button>
+      <button id="cancel" type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
